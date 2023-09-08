@@ -4,13 +4,14 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>90c410b8-35e0-4ab8-9364-838d05823121</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Python.py</StartupFile>
+    <StartupFile>Folder\module2.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>Python</Name>
     <RootNamespace>Python</RootNamespace>
+    <TestFramework>Pytest</TestFramework>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,10 +22,19 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="TextFile.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Folder\module1.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Folder\module2.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Python.py" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="TextFile.txt" />
+    <Folder Include="Folder\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
